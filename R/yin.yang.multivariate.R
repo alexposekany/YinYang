@@ -1,18 +1,16 @@
 #' A method that does stuff
 #'
-#' @param sample_list parameter
-#' @param prior_list parameter
-#' @param algo parameter
-#' @param method parameter
-#' @param prob_old parameter
-#' @param burn.in parameter
-#' @param bw.adj parameter
-#' @param rancor paramete
-#' @param bw.adj parameter
-#' @param rancor parameter
-#' @param neps parameter
-#' @param check parameter
-#' @param nsam parameter
+#' @param sample_list A list of input sample vectors
+#' @param prior_list  A list of prior probabilities of the samples' draws with the same length as the sample vectors
+#' @param algo variant of the algorithm ("multinom" for simple Yin Yang algorithm, "MH" for MH Yin Yang algorithm)
+#' @param method method for caluculating the yin yang resampling (possible values: 'tree' if number of sample = 2^n, 'sequential' for sequential resampling evaluation)
+#' @param prob_old probability to draw from the 'old' yin sample; if numeric between 0 and 1: (1-prob_old) = probability to draw from the 'new' yang sample or method to determine probability to draw from the 'old' yin sample;the probability is calculated based on the difference of the variances, "heuristic" based on samples' variances  (deafult), "exact"   based on simulations to recover exact probabilities, (1-prob_old) = probability to draw from the 'new' yang sample
+#' @param burn.in length of burn-in to initially cut off every MH resampling run and the input samples, caveat: add 'artificial' burn-in to inputs, if you correct manually in advance
+#' @param bw.adj manual adjustment to kernal density estimator's bandwidth
+#' @param rancor range correction to make range slightly large and density estimation positive value on the outer rims
+#' @param neps number of steps for approximating the optimal weights
+#' @param check indicator whether one wants to check the merging behaviour, then summaries for each step of merging are displayed
+#' @param nsam number of samples to produce
 #'
 #' @return
 #'

@@ -19,27 +19,27 @@ yin.yang.sampling.multivariate(
 )
 }
 \arguments{
-\item{sample_list}{parameter}
+\item{sample_list}{A list of input sample vectors}
 
-\item{prior_list}{parameter}
+\item{prior_list}{A list of prior probabilities of the samples' draws with the same length as the sample vectors}
 
-\item{algo}{parameter}
+\item{algo}{variant of the algorithm ("multinom" for simple Yin Yang algorithm, "MH" for MH Yin Yang algorithm)}
 
-\item{method}{parameter}
+\item{method}{method for caluculating the yin yang resampling (possible values: 'tree' if number of sample = 2^n, 'sequential' for sequential resampling evaluation)}
 
-\item{prob_old}{parameter}
+\item{prob_old}{probability to draw from the 'old' yin sample; if numeric between 0 and 1: (1-prob_old) = probability to draw from the 'new' yang sample or method to determine probability to draw from the 'old' yin sample;the probability is calculated based on the difference of the variances, "heuristic" based on samples' variances  (deafult), "exact"   based on simulations to recover exact probabilities, (1-prob_old) = probability to draw from the 'new' yang sample}
 
-\item{burn.in}{parameter}
+\item{burn.in}{length of burn-in to initially cut off every MH resampling run and the input samples, caveat: add 'artificial' burn-in to inputs, if you correct manually in advance}
 
-\item{bw.adj}{parameter}
+\item{bw.adj}{manual adjustment to kernal density estimator's bandwidth}
 
-\item{rancor}{parameter}
+\item{rancor}{range correction to make range slightly large and density estimation positive value on the outer rims}
 
-\item{neps}{parameter}
+\item{neps}{number of steps for approximating the optimal weights}
 
-\item{check}{parameter}
+\item{check}{indicator whether one wants to check the merging behaviour, then summaries for each step of merging are displayed}
 
-\item{nsam}{parameter}
+\item{nsam}{number of samples to produce}
 }
 \value{
 

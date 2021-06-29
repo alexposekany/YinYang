@@ -2,27 +2,28 @@
 % Please edit documentation in R/l2distance.R
 \name{l2dist}
 \alias{l2dist}
-\title{Function that computes the distance between the two functions estimated by the samples}
+\title{L2Distance}
 \usage{
 l2dist(sample1, sample2, samp = FALSE, rancor = 0.05, gridsize = NA)
 }
 \arguments{
-\item{sample1}{a vector of probabilties for the support points}
+\item{sample1}{a vector of observations}
 
-\item{sample2}{a vector of probabilties for the support points}
+\item{sample2}{a vector of observations}
 
-\item{samp}{noclue}
+\item{samp}{indicator whether a random subsample should be sampled or the full original observations taken for calculations}
 
-\item{rancor}{noclue}
+\item{rancor}{value of how much larger the support is the kernel density estimator is chosen compared beyond the minimum and maximum value}
 
-\item{gridsize}{noclue}
+\item{gridsize}{factor of the grid size chosen for kernel density estimator}
 }
 \value{
 dist L2 - distance between the two functions estimated by the samples
 }
 \description{
-Function that computes the distance between the two functions estimated by the samples
+Function that computes the L2 distance between the two functions estimated by the samples
 }
 \examples{
-#l2dist(s)
+#x<-runif(100);y<-runif(100)
+#l2dist(x,y)
 }

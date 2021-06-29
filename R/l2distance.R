@@ -1,14 +1,17 @@
-#' Function that computes the distance between the two functions estimated by the samples
+#' L2Distance
 #'
-#' @param sample1 a vector of probabilties for the support points
-#' @param sample2 a vector of probabilties for the support points
-#' @param samp noclue
-#' @param rancor noclue
-#' @param gridsize noclue
+#' Function that computes the L2 distance between the two functions estimated by the samples
+#'
+#' @param sample1 a vector of observations
+#' @param sample2 a vector of observations
+#' @param samp indicator whether a random subsample should be sampled or the full original observations taken for calculations
+#' @param rancor value of how much larger the support is the kernel density estimator is chosen compared beyond the minimum and maximum value
+#' @param gridsize factor of the grid size chosen for kernel density estimator
 #'
 #' @return dist L2 - distance between the two functions estimated by the samples
 #' @examples
-#' #l2dist(s)
+#' #x<-runif(100);y<-runif(100)
+#' #l2dist(x,y)
 #' @export
 l2dist<-function(sample1, sample2, samp=FALSE,rancor=0.05,gridsize=NA){
   l2distance<-function(sample1, sample2){

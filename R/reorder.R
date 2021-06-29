@@ -1,4 +1,6 @@
-#' Derives the range of a vector
+#' ran
+#'
+#' derives the range of a vector.
 #'
 #' @param x vector with unknown range
 #'
@@ -17,14 +19,16 @@ ran<-function(x){
 }
 
 ## derive ordering of the items in the list by their range
-#' Computes the vector of the highest ranges within the vector and returns it as a vector of decreasing size
+#' ran.list
 #'
-#' @param beta_list a two dimensional vector of which the ordered range is of intersest
+#' Computes the vector of indices according to decreasing order of the ranges within the vector. This is the basis for ordering a list according to the range of vectors in the list.
+#'
+#' @param beta_list a two dimensional vector of which the ordered range is of interest
 #'
 #' @return vector of ordered ranges
 #'
 #' @examples
-#'
+#' #ran.list(list(x=runif(100,min=1,max=2),y=runif(100,min=1,max=2)))
 #' @export
 ran.list<-function(beta_list){
   ran_beta<-numeric(length(beta_list))
@@ -37,14 +41,16 @@ ran.list<-function(beta_list){
 }
 
 ## derive ordering of the items in the list by their median locations
-#' Computes the increasing order of items based on median.
+#' med.list
+#'
+#' Computes the increasing order of items based on median. This is the basis for ordering a list according to the range of vectors in the list.
 #'
 #' @param beta_list a two dimensional vector of which the ordered median is of interest
 #'
 #' @return vector of increasing medians of
 #'
 #' @examples
-#'
+#' #med.list(list(x=runif(100,min=1,max=2),y=runif(100,min=1,max=2)))
 #' @export
 med.list<-function(beta_list){
   med_beta<-numeric(length(beta_list))

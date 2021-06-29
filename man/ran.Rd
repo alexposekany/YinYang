@@ -2,7 +2,7 @@
 % Please edit documentation in R/reorder.R
 \name{ran}
 \alias{ran}
-\title{Derives the range of a vector}
+\title{ran}
 \usage{
 ran(x)
 }
@@ -13,7 +13,7 @@ ran(x)
 the range of the vector
 }
 \description{
-Derives the range of a vector
+derives the range of a vector.
 }
 \examples{
 custom_vector = c(5,2,7,9,4)

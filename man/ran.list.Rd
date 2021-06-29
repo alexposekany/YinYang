@@ -2,19 +2,19 @@
 % Please edit documentation in R/reorder.R
 \name{ran.list}
 \alias{ran.list}
-\title{Computes the vector of the highest ranges within the vector and returns it as a vector of decreasing size}
+\title{ran.list}
 \usage{
 ran.list(beta_list)
 }
 \arguments{
-\item{beta_list}{a two dimensional vector of which the ordered range is of intersest}
+\item{beta_list}{a two dimensional vector of which the ordered range is of interest}
 }
 \value{
 vector of ordered ranges
 }
 \description{
-Computes the vector of the highest ranges within the vector and returns it as a vector of decreasing size
+Computes the vector of indices according to decreasing order of the ranges within the vector. This is the basis for ordering a list according to the range of vectors in the list.
 }
 \examples{
-
+#ran.list(list(x=runif(100,min=1,max=2),y=runif(100,min=1,max=2)))
 }

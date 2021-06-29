@@ -2,7 +2,7 @@
 % Please edit documentation in R/reorder.R
 \name{med.list}
 \alias{med.list}
-\title{Computes the increasing order of items based on median.}
+\title{med.list}
 \usage{
 med.list(beta_list)
 }
@@ -13,8 +13,8 @@ med.list(beta_list)
 vector of increasing medians of
 }
 \description{
-Computes the increasing order of items based on median.
+Computes the increasing order of items based on median. This is the basis for ordering a list according to the range of vectors in the list.
 }
 \examples{
-
+#med.list(list(x=runif(100,min=1,max=2),y=runif(100,min=1,max=2)))
 }
